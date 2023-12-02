@@ -73,8 +73,28 @@ void main()
     unsigned int i=0;
     while(1)
     {
+
+    // write LEDs:
+    // off
+    Xil_Out32(0x40000000,0x00000000);
     usleep(1000000);
     xil_printf("Uptime : %d seconds\n\r",i++);
+    // red
+	Xil_Out32(0x40000000,0x00000009);
+	usleep(1000000);
+	xil_printf("Uptime : %d seconds\n\r",i++);
+    // green
+	Xil_Out32(0x40000000,0x00000012);
+	usleep(1000000);
+	xil_printf("Uptime : %d seconds\n\r",i++);
+    // blue
+	Xil_Out32(0x40000000,0x00000024);
+	usleep(1000000);
+	xil_printf("Uptime : %d seconds\n\r",i++);
+    // purple
+	Xil_Out32(0x40000000,0x0000002d);
+	usleep(1000000);
+	xil_printf("Uptime : %d seconds\n\r",i++);
     }
 }
 
